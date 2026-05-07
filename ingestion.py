@@ -143,13 +143,15 @@ def build_corpus(fetched_documents: list[FetchedDocument], settings: Settings) -
                 error="No HTML was fetched for the document.",
             )
             failures.append(failure)
+            failure_section = _failure_section(fetched.source, failure)
+            all_sections.append(failure_section)
             statuses.append(
                 CorpusDocumentStatus(
                     document_id=fetched.source.document_id,
                     document_name=fetched.source.name,
                     source_url=fetched.source.url,
                     fetched=False,
-                    section_count=0,
+                    section_count=1,
                     failure=failure.error,
                 )
             )
@@ -187,13 +189,15 @@ def build_corpus(fetched_documents: list[FetchedDocument], settings: Settings) -
                 error="Fetched page did not yield any meaningful content sections.",
             )
             failures.append(failure)
+            failure_section = _failure_section(fetched.source, failure)
+            all_sections.append(failure_section)
             statuses.append(
                 CorpusDocumentStatus(
                     document_id=fetched.source.document_id,
                     document_name=fetched.source.name,
                     source_url=fetched.source.url,
                     fetched=False,
-                    section_count=0,
+                    section_count=1,
                     failure=failure.error,
                 )
             )
@@ -255,12 +259,15 @@ def _extract_blocks(root) -> list[tuple[str, str]]:
     previous_text = ""
     for tag in root.find_all(["h1", "h2", "h3", "h4", "h5", "h6", "p", "li"], recursive=True):
         text = normalize_text(tag.get_text(" ", strip=True))
-        if not _is_meaningful(text):
+        kind = "heading" if tag.name and tag.name.lower().startswith("h") else "text"
+        if kind == "heading":
+            if len(text) < 3 or NOISE_RE.match(text):
+                continue
+        elif not _is_meaningful(text):
             continue
         if text == previous_text:
             continue
         previous_text = text
-        kind = "heading" if tag.name and tag.name.lower().startswith("h") else "text"
         blocks.append((kind, text))
     return blocks
 
@@ -342,3 +349,21 @@ def _split_paragraphs(paragraphs: list[str], max_section_chars: int) -> list[lis
     if current:
         chunks.append(current)
     return chunks
+
+
+def _failure_section(source: DocumentSource, failure: FetchFailure) -> CorpusSection:
+    text = normalize_text(
+        "FETCH FAILURE: Live content could not be loaded for this configured source. "
+        f"Source URL: {source.url}. Failure stage: {failure.stage}. Error: {failure.error}. "
+        "This section exists to preserve an auditable document record; it is not source policy text."
+    )
+    return CorpusSection(
+        document_id=source.document_id,
+        document_name=source.name,
+        source_url=source.url,
+        section_id=f"{source.document_id}-001",
+        section_title="Fetch failure",
+        text=text,
+        character_count=len(text),
+        content_hash=stable_hash(text),
+    )

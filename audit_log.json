@@ -1,20 +1,51 @@
 {
-  "generated_at": "2026-05-07T13:19:45Z",
+  "generated_at": "2026-05-07T13:27:36Z",
   "items": [
     {
       "item_type": "semantic_change",
       "item_id": "CHG-001",
-      "summary": "The mock analyzer did not identify a material semantic change.",
-      "source_section_ids": [],
+      "summary": "Current regulatory language differs semantically from the prior snapshot and needs review.",
+      "source_section_ids": [
+        "A-001"
+      ],
       "artifact_refs": [
         "semantic_diff.json"
+      ]
+    },
+    {
+      "item_type": "contradiction",
+      "item_id": "CON-001",
+      "summary": "These sections should be reviewed together because their obligations or customer-facing commitments may need operational alignment.",
+      "source_section_ids": [
+        "B-001",
+        "C-001"
+      ],
+      "artifact_refs": [
+        "contradictions.json"
+      ]
+    },
+    {
+      "item_type": "contradiction",
+      "item_id": "CON-002",
+      "summary": "These sections should be reviewed together because their obligations or customer-facing commitments may need operational alignment.",
+      "source_section_ids": [
+        "B-001",
+        "D-001"
+      ],
+      "artifact_refs": [
+        "contradictions.json"
       ]
     },
     {
       "item_type": "recommended_action",
       "item_id": "A1",
       "summary": "Review the identified compliance findings against the cited source sections and approve any public-language updates.",
-      "source_section_ids": [],
+      "source_section_ids": [
+        "A-001",
+        "B-001",
+        "C-001",
+        "D-001"
+      ],
       "artifact_refs": [
         "risk_briefing_draft.md",
         "risk_briefing.md"
@@ -24,7 +55,12 @@
       "item_type": "recommended_action",
       "item_id": "A2",
       "summary": "Assess operational impact and prepare internal handling notes for affected customer workflows.",
-      "source_section_ids": [],
+      "source_section_ids": [
+        "A-001",
+        "B-001",
+        "C-001",
+        "D-001"
+      ],
       "artifact_refs": [
         "risk_briefing_draft.md",
         "risk_briefing.md"
@@ -34,7 +70,12 @@
       "item_type": "routing_decision",
       "item_id": "route-Legal",
       "summary": "Legal: Please review action(s) A1 with the cited finding IDs and confirm ownership for remediation.",
-      "source_section_ids": [],
+      "source_section_ids": [
+        "A-001",
+        "B-001",
+        "C-001",
+        "D-001"
+      ],
       "artifact_refs": [
         "stakeholder_routing.json"
       ]
@@ -43,7 +84,12 @@
       "item_type": "routing_decision",
       "item_id": "route-Risk",
       "summary": "Risk: Please review action(s) A2 with the cited finding IDs and confirm ownership for remediation.",
-      "source_section_ids": [],
+      "source_section_ids": [
+        "A-001",
+        "B-001",
+        "C-001",
+        "D-001"
+      ],
       "artifact_refs": [
         "stakeholder_routing.json"
       ]

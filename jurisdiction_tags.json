@@ -1,3 +1,9 @@
 {
-  "tags": []
+  "tags": [
+    {
+      "section_id": "A-001",
+      "jurisdiction": "unknown",
+      "rationale": "Keyword-based mock jurisdiction tag."
+    }
+  ]
 }

@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-05-07T13:19:45Z",
+  "generated_at": "2026-05-07T13:27:36Z",
   "documents": [
     {
       "document_id": "A",
       "document_name": "Regulatory",
       "source_url": "https://deriv.com/regulatory/",
       "fetched": false,
-      "section_count": 0,
+      "section_count": 1,
       "failure": "HTTP Error 403: Forbidden"
     },
     {
@@ -14,7 +14,7 @@
       "document_name": "Terms and Conditions - Clients",
       "source_url": "https://deriv.com/terms-and-conditions#clients",
       "fetched": false,
-      "section_count": 0,
+      "section_count": 1,
       "failure": "HTTP Error 403: Forbidden"
     },
     {
@@ -22,7 +22,7 @@
       "document_name": "Responsible Trading",
       "source_url": "https://deriv.com/responsible",
       "fetched": false,
-      "section_count": 0,
+      "section_count": 1,
       "failure": "HTTP Error 403: Forbidden"
     },
     {
@@ -30,11 +30,52 @@
       "document_name": "Fraud Prevention",
       "source_url": "https://deriv.com/fraud-prevention",
       "fetched": false,
-      "section_count": 0,
+      "section_count": 1,
       "failure": "HTTP Error 403: Forbidden"
     }
   ],
-  "sections": [],
+  "sections": [
+    {
+      "document_id": "A",
+      "document_name": "Regulatory",
+      "source_url": "https://deriv.com/regulatory/",
+      "section_id": "A-001",
+      "section_title": "Fetch failure",
+      "text": "FETCH FAILURE: Live content could not be loaded for this configured source. Source URL: https://deriv.com/regulatory/. Failure stage: playwright_fallback. Error: HTTP Error 403: Forbidden. This section exists to preserve an auditable document record; it is not source policy text.",
+      "character_count": 280,
+      "content_hash": "694fb33e00d3fec0"
+    },
+    {
+      "document_id": "B",
+      "document_name": "Terms and Conditions - Clients",
+      "source_url": "https://deriv.com/terms-and-conditions#clients",
+      "section_id": "B-001",
+      "section_title": "Fetch failure",
+      "text": "FETCH FAILURE: Live content could not be loaded for this configured source. Source URL: https://deriv.com/terms-and-conditions#clients. Failure stage: playwright_fallback. Error: HTTP Error 403: Forbidden. This section exists to preserve an auditable document record; it is not source policy text.",
+      "character_count": 297,
+      "content_hash": "7a14dc791e636532"
+    },
+    {
+      "document_id": "C",
+      "document_name": "Responsible Trading",
+      "source_url": "https://deriv.com/responsible",
+      "section_id": "C-001",
+      "section_title": "Fetch failure",
+      "text": "FETCH FAILURE: Live content could not be loaded for this configured source. Source URL: https://deriv.com/responsible. Failure stage: playwright_fallback. Error: HTTP Error 403: Forbidden. This section exists to preserve an auditable document record; it is not source policy text.",
+      "character_count": 280,
+      "content_hash": "02559ad159494dae"
+    },
+    {
+      "document_id": "D",
+      "document_name": "Fraud Prevention",
+      "source_url": "https://deriv.com/fraud-prevention",
+      "section_id": "D-001",
+      "section_title": "Fetch failure",
+      "text": "FETCH FAILURE: Live content could not be loaded for this configured source. Source URL: https://deriv.com/fraud-prevention. Failure stage: playwright_fallback. Error: HTTP Error 403: Forbidden. This section exists to preserve an auditable document record; it is not source policy text.",
+      "character_count": 285,
+      "content_hash": "1f3e1d25c00eafa3"
+    }
+  ],
   "failures": [
     {
       "document_id": "A",

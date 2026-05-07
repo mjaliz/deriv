@@ -1,4 +1,37 @@
 {
-  "contradictions": [],
-  "explanation_if_fewer_than_two": "Fewer than two candidate contradictions were available in mock mode because the selected corpus lacked enough cross-document sections."
+  "contradictions": [
+    {
+      "contradiction_id": "CON-001",
+      "documents_involved": [
+        "B",
+        "C"
+      ],
+      "source_section_ids": [
+        "B-001",
+        "C-001"
+      ],
+      "statement_a": "FETCH FAILURE: Live content could not be loaded for this configured source.",
+      "statement_b": "FETCH FAILURE: Live content could not be loaded for this configured source.",
+      "why_it_may_conflict": "These sections should be reviewed together because their obligations or customer-facing commitments may need operational alignment.",
+      "severity": "minor",
+      "confidence": "low"
+    },
+    {
+      "contradiction_id": "CON-002",
+      "documents_involved": [
+        "B",
+        "D"
+      ],
+      "source_section_ids": [
+        "B-001",
+        "D-001"
+      ],
+      "statement_a": "FETCH FAILURE: Live content could not be loaded for this configured source.",
+      "statement_b": "FETCH FAILURE: Live content could not be loaded for this configured source.",
+      "why_it_may_conflict": "These sections should be reviewed together because their obligations or customer-facing commitments may need operational alignment.",
+      "severity": "minor",
+      "confidence": "low"
+    }
+  ],
+  "explanation_if_fewer_than_two": null
 }

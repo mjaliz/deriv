@@ -19,3 +19,47 @@
 2026-05-07 16:49:45.382 | INFO     | llm:call:60 - LLM stage HALLUCINATION_VALIDATED -> hallucination_validation.json
 2026-05-07 16:49:45.384 | INFO     | llm:call:60 - LLM stage STAKEHOLDER_ROUTING_COMPLETE -> stakeholder_routing.json
 2026-05-07 16:49:45.385 | INFO     | llm:call:60 - LLM stage CHANGE_VELOCITY_ANALYSIS -> change_velocity_report.json
+2026-05-07 16:55:20.793 | INFO     | __main__:run_pipeline:87 - Starting compliance diff pipeline
+2026-05-07 16:55:21.215 | WARNING  | ingestion:fetch_live_documents:63 - Playwright fetch failed before completion; falling back to urllib: BrowserType.launch: Executable doesn't exist at /Users/mjaliz/Library/Caches/ms-playwright/chromium_headless_shell-1217/chrome-headless-shell-mac-arm64/chrome-headless-shell
+╔════════════════════════════════════════════════════════════╗
+║ Looks like Playwright was just installed or updated.       ║
+║ Please run the following command to download new browsers: ║
+║                                                            ║
+║     playwright install                                     ║
+║                                                            ║
+║ <3 Playwright Team                                         ║
+╚════════════════════════════════════════════════════════════╝
+2026-05-07 16:55:21.216 | INFO     | ingestion:_fetch_with_urllib:106 - Fallback HTTP fetch for A from https://deriv.com/regulatory/
+2026-05-07 16:55:24.415 | INFO     | ingestion:_fetch_with_urllib:106 - Fallback HTTP fetch for B from https://deriv.com/terms-and-conditions#clients
+2026-05-07 16:55:25.524 | INFO     | ingestion:_fetch_with_urllib:106 - Fallback HTTP fetch for C from https://deriv.com/responsible
+2026-05-07 16:55:26.128 | INFO     | ingestion:_fetch_with_urllib:106 - Fallback HTTP fetch for D from https://deriv.com/fraud-prevention
+2026-05-07 16:55:26.609 | INFO     | llm:call:60 - LLM stage JURISDICTION_TAGGING -> jurisdiction_tags.json
+2026-05-07 16:55:26.611 | INFO     | llm:call:60 - LLM stage SNAPSHOT_DIFF_COMPLETE -> semantic_diff.json
+2026-05-07 16:55:26.612 | INFO     | llm:call:60 - LLM stage CROSS_DOCUMENT_CHECK_COMPLETE -> contradictions.json
+2026-05-07 16:55:26.612 | INFO     | llm:call:60 - LLM stage RISK_BRIEFING_DRAFTED -> risk_briefing_draft.md
+2026-05-07 16:55:26.613 | INFO     | llm:call:60 - LLM stage HALLUCINATION_VALIDATED -> hallucination_validation.json
+2026-05-07 16:55:26.614 | INFO     | llm:call:60 - LLM stage STAKEHOLDER_ROUTING_COMPLETE -> stakeholder_routing.json
+2026-05-07 16:55:26.614 | INFO     | llm:call:60 - LLM stage CHANGE_VELOCITY_ANALYSIS -> change_velocity_report.json
+2026-05-07 16:55:26.617 | INFO     | __main__:run_pipeline:150 - Pipeline complete: INIT, SOURCES_LOADED, LIVE_DOCUMENTS_FETCHED, DOCUMENTS_CLEANED, DOCUMENTS_SEGMENTED, SNAPSHOT_DIFF_COMPLETE, CROSS_DOCUMENT_CHECK_COMPLETE, RISK_BRIEFING_DRAFTED, HALLUCINATION_VALIDATED, FINAL_BRIEFING_WRITTEN, STAKEHOLDER_ROUTING_COMPLETE, AUDIT_LOG_EXPORTED, VALIDATION_COMPLETE, RESULTS_FINALISED
+2026-05-07 16:57:33.295 | INFO     | __main__:run_pipeline:87 - Starting compliance diff pipeline
+2026-05-07 16:57:33.660 | WARNING  | ingestion:fetch_live_documents:63 - Playwright fetch failed before completion; falling back to urllib: BrowserType.launch: Executable doesn't exist at /Users/mjaliz/Library/Caches/ms-playwright/chromium_headless_shell-1217/chrome-headless-shell-mac-arm64/chrome-headless-shell
+╔════════════════════════════════════════════════════════════╗
+║ Looks like Playwright was just installed or updated.       ║
+║ Please run the following command to download new browsers: ║
+║                                                            ║
+║     playwright install                                     ║
+║                                                            ║
+║ <3 Playwright Team                                         ║
+╚════════════════════════════════════════════════════════════╝
+2026-05-07 16:57:33.660 | INFO     | ingestion:_fetch_with_urllib:106 - Fallback HTTP fetch for A from https://deriv.com/regulatory/
+2026-05-07 16:57:34.169 | INFO     | ingestion:_fetch_with_urllib:106 - Fallback HTTP fetch for B from https://deriv.com/terms-and-conditions#clients
+2026-05-07 16:57:35.076 | INFO     | ingestion:_fetch_with_urllib:106 - Fallback HTTP fetch for C from https://deriv.com/responsible
+2026-05-07 16:57:35.599 | INFO     | ingestion:_fetch_with_urllib:106 - Fallback HTTP fetch for D from https://deriv.com/fraud-prevention
+2026-05-07 16:57:36.394 | INFO     | llm:call:60 - LLM stage JURISDICTION_TAGGING -> jurisdiction_tags.json
+2026-05-07 16:57:36.398 | INFO     | llm:call:60 - LLM stage SNAPSHOT_DIFF_COMPLETE -> semantic_diff.json
+2026-05-07 16:57:36.401 | INFO     | llm:call:60 - LLM stage CROSS_DOCUMENT_CHECK_COMPLETE -> contradictions.json
+2026-05-07 16:57:36.403 | INFO     | llm:call:60 - LLM stage RISK_BRIEFING_DRAFTED -> risk_briefing_draft.md
+2026-05-07 16:57:36.404 | INFO     | llm:call:60 - LLM stage HALLUCINATION_VALIDATED -> hallucination_validation.json
+2026-05-07 16:57:36.405 | INFO     | llm:call:60 - LLM stage STAKEHOLDER_ROUTING_COMPLETE -> stakeholder_routing.json
+2026-05-07 16:57:36.406 | INFO     | llm:call:60 - LLM stage CHANGE_VELOCITY_ANALYSIS -> change_velocity_report.json
+2026-05-07 16:57:36.408 | INFO     | __main__:run_pipeline:150 - Pipeline complete: INIT, SOURCES_LOADED, LIVE_DOCUMENTS_FETCHED, DOCUMENTS_CLEANED, DOCUMENTS_SEGMENTED, SNAPSHOT_DIFF_COMPLETE, CROSS_DOCUMENT_CHECK_COMPLETE, RISK_BRIEFING_DRAFTED, HALLUCINATION_VALIDATED, FINAL_BRIEFING_WRITTEN, STAKEHOLDER_ROUTING_COMPLETE, AUDIT_LOG_EXPORTED, VALIDATION_COMPLETE, RESULTS_FINALISED

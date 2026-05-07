@@ -87,6 +87,7 @@ def validate_artifacts(
     _validate_corpus(sources, corpus, errors)
     _validate_chunking(chunks, errors)
     _validate_llm_calls(llm_calls, errors)
+    _validate_finding_section_refs(corpus, semantic, contradictions, hallucination, errors)
     briefing = _validate_briefing_files(output_dir, errors)
     if briefing is not None:
         _validate_stage_dependencies(semantic, contradictions, briefing, routing, errors)
@@ -166,6 +167,28 @@ def _validate_llm_calls(calls: list[LLMCallRecord], errors: list[str]) -> None:
     missing = sorted(required_stages - stages)
     if missing:
         errors.append(f"llm_calls.jsonl missing stages: {', '.join(missing)}")
+
+
+def _validate_finding_section_refs(
+    corpus: CorpusArtifact,
+    semantic: SemanticDiffOutput,
+    contradictions: ContradictionsOutput,
+    hallucination: HallucinationValidationOutput,
+    errors: list[str],
+) -> None:
+    section_ids = {section.section_id for section in corpus.sections}
+    for change in semantic.changes:
+        unknown = set(change.affected_section_ids) - section_ids
+        if unknown:
+            errors.append(f"semantic change {change.change_id} references unknown sections: {sorted(unknown)}")
+    for contradiction in contradictions.contradictions:
+        unknown = set(contradiction.source_section_ids) - section_ids
+        if unknown:
+            errors.append(f"contradiction {contradiction.contradiction_id} references unknown sections: {sorted(unknown)}")
+    for claim in hallucination.claims:
+        unknown = set(claim.source_section_ids) - section_ids
+        if unknown:
+            errors.append(f"hallucination validation claim references unknown sections: {sorted(unknown)}")
 
 
 def _validate_briefing_files(output_dir: Path, errors: list[str]) -> RiskBriefingOutput | None:
