@@ -1,0 +1,4 @@
+{
+  "contradictions": [],
+  "explanation_if_fewer_than_two": "Fewer than two candidate contradictions were available in mock mode because the selected corpus lacked enough cross-document sections."
+}

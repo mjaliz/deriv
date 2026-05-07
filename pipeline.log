@@ -1,0 +1,21 @@
+2026-05-07 16:49:36.378 | INFO     | __main__:run_pipeline:87 - Starting compliance diff pipeline
+2026-05-07 16:49:41.397 | WARNING  | ingestion:fetch_live_documents:63 - Playwright fetch failed before completion; falling back to urllib: BrowserType.launch: Executable doesn't exist at /Users/mjaliz/Library/Caches/ms-playwright/chromium_headless_shell-1217/chrome-headless-shell-mac-arm64/chrome-headless-shell
+╔════════════════════════════════════════════════════════════╗
+║ Looks like Playwright was just installed or updated.       ║
+║ Please run the following command to download new browsers: ║
+║                                                            ║
+║     playwright install                                     ║
+║                                                            ║
+║ <3 Playwright Team                                         ║
+╚════════════════════════════════════════════════════════════╝
+2026-05-07 16:49:41.397 | INFO     | ingestion:_fetch_with_urllib:106 - Fallback HTTP fetch for A from https://deriv.com/regulatory/
+2026-05-07 16:49:43.550 | INFO     | ingestion:_fetch_with_urllib:106 - Fallback HTTP fetch for B from https://deriv.com/terms-and-conditions#clients
+2026-05-07 16:49:44.201 | INFO     | ingestion:_fetch_with_urllib:106 - Fallback HTTP fetch for C from https://deriv.com/responsible
+2026-05-07 16:49:44.840 | INFO     | ingestion:_fetch_with_urllib:106 - Fallback HTTP fetch for D from https://deriv.com/fraud-prevention
+2026-05-07 16:49:45.371 | INFO     | llm:call:60 - LLM stage JURISDICTION_TAGGING -> jurisdiction_tags.json
+2026-05-07 16:49:45.373 | INFO     | llm:call:60 - LLM stage SNAPSHOT_DIFF_COMPLETE -> semantic_diff.json
+2026-05-07 16:49:45.376 | INFO     | llm:call:60 - LLM stage CROSS_DOCUMENT_CHECK_COMPLETE -> contradictions.json
+2026-05-07 16:49:45.379 | INFO     | llm:call:60 - LLM stage RISK_BRIEFING_DRAFTED -> risk_briefing_draft.md
+2026-05-07 16:49:45.382 | INFO     | llm:call:60 - LLM stage HALLUCINATION_VALIDATED -> hallucination_validation.json
+2026-05-07 16:49:45.384 | INFO     | llm:call:60 - LLM stage STAKEHOLDER_ROUTING_COMPLETE -> stakeholder_routing.json
+2026-05-07 16:49:45.385 | INFO     | llm:call:60 - LLM stage CHANGE_VELOCITY_ANALYSIS -> change_velocity_report.json

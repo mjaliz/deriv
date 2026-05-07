@@ -1,0 +1,18 @@
+{
+  "routes": [
+    {
+      "team": "Legal",
+      "action_ids": [
+        "A1"
+      ],
+      "notification": "Legal: Please review action(s) A1 with the cited finding IDs and confirm ownership for remediation."
+    },
+    {
+      "team": "Risk",
+      "action_ids": [
+        "A2"
+      ],
+      "notification": "Risk: Please review action(s) A2 with the cited finding IDs and confirm ownership for remediation."
+    }
+  ]
+}

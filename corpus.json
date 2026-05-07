@@ -1,0 +1,68 @@
+{
+  "generated_at": "2026-05-07T13:19:45Z",
+  "documents": [
+    {
+      "document_id": "A",
+      "document_name": "Regulatory",
+      "source_url": "https://deriv.com/regulatory/",
+      "fetched": false,
+      "section_count": 0,
+      "failure": "HTTP Error 403: Forbidden"
+    },
+    {
+      "document_id": "B",
+      "document_name": "Terms and Conditions - Clients",
+      "source_url": "https://deriv.com/terms-and-conditions#clients",
+      "fetched": false,
+      "section_count": 0,
+      "failure": "HTTP Error 403: Forbidden"
+    },
+    {
+      "document_id": "C",
+      "document_name": "Responsible Trading",
+      "source_url": "https://deriv.com/responsible",
+      "fetched": false,
+      "section_count": 0,
+      "failure": "HTTP Error 403: Forbidden"
+    },
+    {
+      "document_id": "D",
+      "document_name": "Fraud Prevention",
+      "source_url": "https://deriv.com/fraud-prevention",
+      "fetched": false,
+      "section_count": 0,
+      "failure": "HTTP Error 403: Forbidden"
+    }
+  ],
+  "sections": [],
+  "failures": [
+    {
+      "document_id": "A",
+      "document_name": "Regulatory",
+      "source_url": "https://deriv.com/regulatory/",
+      "stage": "playwright_fallback",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "document_id": "B",
+      "document_name": "Terms and Conditions - Clients",
+      "source_url": "https://deriv.com/terms-and-conditions#clients",
+      "stage": "playwright_fallback",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "document_id": "C",
+      "document_name": "Responsible Trading",
+      "source_url": "https://deriv.com/responsible",
+      "stage": "playwright_fallback",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "document_id": "D",
+      "document_name": "Fraud Prevention",
+      "source_url": "https://deriv.com/fraud-prevention",
+      "stage": "playwright_fallback",
+      "error": "HTTP Error 403: Forbidden"
+    }
+  ]
+}

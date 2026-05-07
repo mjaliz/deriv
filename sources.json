@@ -1,0 +1,24 @@
+{
+  "documents": [
+    {
+      "document_id": "A",
+      "name": "Regulatory",
+      "url": "https://deriv.com/regulatory/"
+    },
+    {
+      "document_id": "B",
+      "name": "Terms and Conditions - Clients",
+      "url": "https://deriv.com/terms-and-conditions#clients"
+    },
+    {
+      "document_id": "C",
+      "name": "Responsible Trading",
+      "url": "https://deriv.com/responsible"
+    },
+    {
+      "document_id": "D",
+      "name": "Fraud Prevention",
+      "url": "https://deriv.com/fraud-prevention"
+    }
+  ]
+}

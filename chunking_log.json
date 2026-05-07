@@ -1,0 +1,97 @@
+{
+  "generated_at": "2026-05-07T13:19:45Z",
+  "records": [
+    {
+      "stage": "JURISDICTION_TAGGING",
+      "batch_number": 1,
+      "input_artifacts": [
+        "corpus.json"
+      ],
+      "included_section_ids": [],
+      "omitted_section_ids": [],
+      "selection_reason": "Selected Document A sections for jurisdiction tagging before semantic diff.",
+      "included_character_count": 0,
+      "max_character_budget": 60000
+    },
+    {
+      "stage": "SNAPSHOT_DIFF_COMPLETE",
+      "batch_number": 1,
+      "input_artifacts": [
+        "previous_snapshot_document_a.txt",
+        "corpus.json",
+        "jurisdiction_tags.json"
+      ],
+      "included_section_ids": [],
+      "omitted_section_ids": [],
+      "selection_reason": "Selected current Document A sections and jurisdiction metadata for semantic comparison to the prior snapshot.",
+      "included_character_count": 0,
+      "max_character_budget": 60000
+    },
+    {
+      "stage": "CROSS_DOCUMENT_CHECK_COMPLETE",
+      "batch_number": 1,
+      "input_artifacts": [
+        "corpus.json"
+      ],
+      "included_section_ids": [],
+      "omitted_section_ids": [],
+      "selection_reason": "Selected balanced sections from all live documents for simultaneous cross-document consistency review.",
+      "included_character_count": 0,
+      "max_character_budget": 60000
+    },
+    {
+      "stage": "RISK_BRIEFING_DRAFTED",
+      "batch_number": 1,
+      "input_artifacts": [
+        "semantic_diff.json",
+        "contradictions.json",
+        "corpus.json"
+      ],
+      "included_section_ids": [],
+      "omitted_section_ids": [],
+      "selection_reason": "Selected source sections cited by Stage 1 and Stage 2 findings for grounded briefing generation.",
+      "included_character_count": 0,
+      "max_character_budget": 60000
+    },
+    {
+      "stage": "HALLUCINATION_VALIDATED",
+      "batch_number": 1,
+      "input_artifacts": [
+        "risk_briefing_draft.md",
+        "semantic_diff.json",
+        "contradictions.json",
+        "corpus.json"
+      ],
+      "included_section_ids": [],
+      "omitted_section_ids": [],
+      "selection_reason": "Selected source sections cited by findings and actions for claim-level grounding validation.",
+      "included_character_count": 0,
+      "max_character_budget": 60000
+    },
+    {
+      "stage": "STAKEHOLDER_ROUTING_COMPLETE",
+      "batch_number": 1,
+      "input_artifacts": [
+        "risk_briefing_draft.md"
+      ],
+      "included_section_ids": [],
+      "omitted_section_ids": [],
+      "selection_reason": "Stakeholder routing uses structured recommended actions and team responsibility descriptions rather than source sections.",
+      "included_character_count": 0,
+      "max_character_budget": 60000
+    },
+    {
+      "stage": "CHANGE_VELOCITY_ANALYSIS",
+      "batch_number": 1,
+      "input_artifacts": [
+        "semantic_diff.json",
+        "corpus.json"
+      ],
+      "included_section_ids": [],
+      "omitted_section_ids": [],
+      "selection_reason": "Change velocity uses current run metadata and prior run state, not source section text.",
+      "included_character_count": 0,
+      "max_character_budget": 60000
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "changes": [
+    {
+      "change_id": "CHG-001",
+      "type": "no_material_change",
+      "severity": "none",
+      "before": "Deriv is licensed and regulated by the British Virgin Islands Financial Services Commission (FSC) under the Securities and Investment Business Act, 2010.",
+      "after": "No current Document A text available.",
+      "affected_section_ids": [],
+      "jurisdiction": "unknown",
+      "risk_summary": "The mock analyzer did not identify a material semantic change."
+    }
+  ]
+}

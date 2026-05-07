@@ -1,0 +1,11 @@
+{
+  "claims": [
+    {
+      "claim": "The draft briefing is based on Stage 1 and Stage 2 outputs.",
+      "grounded": true,
+      "source_section_ids": [],
+      "issue": null,
+      "recommended_correction": null
+    }
+  ]
+}
